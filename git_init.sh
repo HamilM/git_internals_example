@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
-
+if [[ -d ./.git ]]; then
+	echo "Repo exists"
+       exit
+fi
 mkdir .git
 pushd .
 cd .git
